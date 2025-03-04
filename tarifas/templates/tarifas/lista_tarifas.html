@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tarifas</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Tarifas</h1>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Tipo de Veículo</th>
+                    <th>Valor por Hora</th>
+                    <th>Dia da Semana</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for tarifa in tarifas %}
+                <tr>
+                    <td>{{ tarifa.tipo_veiculo }}</td>
+                    <td>{{ tarifa.valor_hora }}</td>
+                    <td>{{ tarifa.dia_semana }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

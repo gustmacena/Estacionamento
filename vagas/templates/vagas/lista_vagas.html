@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Vagas de Estacionamento</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Vagas Disponíveis</h1>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Número</th>
+                    <th>Status</th>
+                    <th>Placa do Carro</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for vaga in vagas %}
+                <tr>
+                    <td>{{ vaga.numero }}</td>
+                    <td>{{ vaga.status }}</td>
+                    <td>{{ vaga.carro.placa|default:"Nenhum" }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
